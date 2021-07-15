@@ -19,8 +19,8 @@ class Population {
         var selectionArray = [];
 
         for (let gene of this.population) {
-
-            for (let i = 0; i < Math.floor(gene.fitness * 100); ++i) {
+            // squared fitness
+            for (let i = 0; i < Math.floor((gene.fitness ** 2) * 100); ++i) {
                 selectionArray.push(gene);
             }
         }
